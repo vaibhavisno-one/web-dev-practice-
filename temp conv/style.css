@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+.canvas{
+    width:500px;
+    height: 500px;
+    /* background-color:pink ; */
+    margin-top: 50px;
+    padding: 60px 60px;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 5px;
+    display : flex;
+    flex-direction: column;
+    box-shadow: 5px 10px  #070707;
+}
+
+.canvas #temp{
+    width: 40%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 50px;
+    margin: 10px;
+    font-size: 20px;
+}
+input[type="checkbox"]{
+    margin: 10px;
+
+}
