@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>temp conversion</title>
+    <title>Temperature Conversion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main">
         <div class="canvas">
-            <h1>Temperature conversion</h1>
-            <input type='tel' name="" id="temp">
-            <h2> fahrenheit to celcius<input type="checkbox" name="" id="f2c" ></h2>
-            <h2>celcius to fahrenheit<input type="checkbox" name="" id="c2f"></h2>
-            <button>submit</button>
-
+            <h1>Temperature Conversion</h1>
+            <input type='tel' name="" id="temp" placeholder="Enter temperature">
+            <h2>
+                Fahrenheit to Celsius
+                <input type="checkbox" name="" id="f2c">
+            </h2>
+            <h2>
+                Celsius to Fahrenheit
+                <input type="checkbox" name="" id="c2f">
+            </h2>
+            <button onclick="convert()">Submit</button>
+            <p class="result">Result will appear here</p>
         </div>
     </div>
-    <script src="script.js" onclick="convert()"></script>
+    <script src="script.js"></script>
 </body>
 </html>
