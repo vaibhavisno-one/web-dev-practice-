@@ -65,4 +65,4 @@ console.log(newFruits);
 // }
 
 // const total = sum(1,2,3,4,5,6,8);
-// console.log(total);
+// console.log(total); 
