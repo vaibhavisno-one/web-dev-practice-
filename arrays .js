@@ -17,7 +17,7 @@ for(let fruit of fruits){
 */
 //...............................................................................................
 //spread operator  (...alows an array or string to be expanded into sepeaarate elments)
-let numbers = [1,2,3,4,5];
+/*let numbers = [1,2,3,4,5];
 let max =Math.max(...numbers)
 
 console.log(max);
@@ -33,3 +33,36 @@ console.log(letters);
 let fruits = ["apple", "banana", "orange"];
 let newFruits = ["mango", ...fruits, "kiwi"];
 console.log(newFruits);
+*/
+//.....................................................................................
+
+// rest parameter (...allows a function to work with a variable number of arguments by bundeling them together into an array)
+
+
+// function openFridge(...foods){
+//     console.log(foods);
+// }
+
+
+
+
+// const food1 ="piza";
+// const food2 = "burger";
+// const food3 = "noodles";
+// const food4 = "chowmein";
+// const food5 = "biryani";
+
+// openFridge(food1,food2,food3,food4,food5);
+
+
+// function sum(...numbers){
+//     let result =0;
+
+//     for(let number of numbers){
+//         result+=number;
+//     }
+//     return result;
+// }
+
+// const total = sum(1,2,3,4,5,6,8);
+// console.log(total);
