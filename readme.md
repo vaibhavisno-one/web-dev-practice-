@@ -7,6 +7,8 @@ This repository serves as a showcase of my journey as I practice and enhance my 
 
 
 
+
+
 🚀 Purpose
 The goal of this repository is to document my learning progress and demonstrate how I tackle various concepts and challenges in web development. It includes examples of:
 
@@ -15,6 +17,8 @@ Backend development and server-side programming.
 Integration of APIs and database management.
 Responsive design and UI/UX enhancements.
 Experimentation with advanced topics like Three.js, React Three Fiber, GSAP, and more.
+
+
 
 
 
@@ -31,6 +35,8 @@ Version Control: Git, GitHub
 
 
 
+
+
 📂 Structure
 The repository is organized into folders based on the topics or projects I’m working on. Each folder contains relevant code, documentation, and resources. Here's a high-level overview:
 
@@ -39,6 +45,8 @@ backend/: Backend services and APIs.
 3d-experiments/: Projects exploring 3D graphics using Three.js.
 fullstack/: Full-stack applications combining frontend and backend.
 sandbox/: Small experiments and coding challenges.
+
+
 
 
 
@@ -57,11 +65,16 @@ Performance: Writing optimized, efficient code for seamless user experiences.
 
 
 
+
+
 🌱 How to Use
 Feel free to explore the repository to see my projects and experiments. You can:
 
 Clone the repository:
+<<<<<<< HEAD
 git clone https://github.com/vaibhavisno-one/web-dev-practice-
+
+
 Navigate through folders to understand my code and approaches.
 Leave feedback or suggestions by opening issues or pull requests.
 💬 Feedback & Suggestions
