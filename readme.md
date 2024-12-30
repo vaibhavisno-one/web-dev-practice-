@@ -33,9 +33,9 @@ This repository serves as a comprehensive collection of my web development pract
 - GitHub
 
 ## 📂 Repository Structure
-├── frontend/           # UI/UX and interactivity projects
-├── backend/           # Server-side services and APIs
-└── 3d-experiments/    # Three.js graphics experiments
+- ├── frontend/           # UI/UX and interactivity projects
+- ├── backend/           # Server-side services and APIs
+- └── 3d-experiments/    # Three.js graphics experiments
 
 
 
@@ -74,10 +74,10 @@ git clone https://github.com/vaibhavisno-one/web-dev-practice
 ```
 
 
-- Navigate through folders to understand my code and approaches.
+2. Navigate through folders to understand my code and approaches.
 Leave feedback or suggestions by opening issues or pull requests.
 ## 💬 Feedback & Suggestions
-# I’m always looking to improve! If you have ideas or feedback on my projects, please feel free to:
+- I’m always looking to improve! If you have ideas or feedback on my projects, please feel free to:
 
 ## Open an issue.
 - Submit a pull request.
