@@ -94,15 +94,90 @@
 // }
 
 
-const students = ['spongebob' , 'patrick' , 'squidward' , 'mr krabs' , 'plankton'];
+// const students = ['spongebob' , 'patrick' , 'squidward' , 'mr krabs' , 'plankton'];
 
-const upper = students.map(uppercase);
-console.log(upper);
-const lower = students.map(lowercase);
-console.log(lower);
-function uppercase(elements){
-    return elements.toUpperCase();
-}
- function lowercase(elements){
-    return elements.toLowerCase();
-}
+// const upper = students.map(uppercase);
+// console.log(upper);
+// const lower = students.map(lowercase);
+// console.log(lower);
+// function uppercase(elements){
+//     return elements.toUpperCase();
+// }
+//  function lowercase(elements){
+//     return elements.toLowerCase();
+// }
+
+
+// .........................................................filter()........................................................
+// accepts boolean value
+//    .filter() = creattes a new array by filtering out elements
+
+// let numbers = [0,1, 2, 3, 4, 5];
+
+// let even = numbers.filter(evenNum);
+
+// console.log(even);
+
+// function evenNum(elements){
+//     return (elements % 2 === 0);
+// }
+
+
+//............................................................reduce()......................................................
+
+// .reduce() = reduce the elements of an array to a single value.
+
+// const prices = [10, 20,25, 30, 40, 50];
+// const total = prices.reduce(sum);
+
+// console.log(`Total: ${total} $`);
+
+
+// function sum (accumulator, element){
+//     return accumulator + element; // whatever the value is returned it stored in accumulator
+// }
+
+
+// const grades = [10, 20, 30, 40, 50];
+//  const max = grades.reduce(maximum);
+// console.log(`Max: ${max}`);
+//  function maximum(accumulator,element){
+//     return Math.max(accumulator,element);
+
+//  }
+
+//.................................................function expressions.................................................
+
+//function declaration = writing down the function
+// function add(x, y) {
+//     return x + y;
+//   }
+//   const result = add(2, 3);
+//   console.log(result);
+
+//function expressions = function that are stored in a variable 
+// const numbers = [1, 2, 3, 4, 5];
+// const squares = numbers.map(function(element){
+//     return Math.pow(element,2);
+// })
+// console.log(squares);
+
+//........................................ARROW FUNCTION........................................................
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const squares = numbers.map((element)=>{return Math.pow(element,2);});
+// const cubes = numbers.map((elements)=>{return Math.pow(elements,3);});
+// const even = numbers.filter((elements)=>{return (elements % 2 === 0);});
+// const odd = numbers.filter((elements)=>{return (elements % 2 !== 0);});
+// const total = numbers.reduce((accumulator,element)=>{return accumulator + element;},0);
+// const max = numbers.reduce((accumulator,element)=>{return Math.max(accumulator,element);},0);
+
+// console.log(squares);
+// console.log(cubes);
+// console.log(even);
+// console.log(odd);
+// console.log(total);
+// console.log(max);
+
+
