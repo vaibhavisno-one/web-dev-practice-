@@ -9,7 +9,7 @@ This repository serves as a showcase of my journey as I practice and enhance my 
 
 
 
-🚀 Purpose
+🚀 Purpose:
 The goal of this repository is to document my learning progress and demonstrate how I tackle various concepts and challenges in web development. It includes examples of:
 
 Frontend development using modern frameworks and libraries.
@@ -24,7 +24,7 @@ Experimentation with advanced topics like Three.js, React Three Fiber, GSAP, and
 
 
 
-🛠️ Technologies
+🛠️ Technologies:
 Here’s a list of tools and technologies you’ll find in this repository:
 
 Frontend: React, Tailwind CSS, GSAP, Locomotive Scroll
@@ -37,14 +37,12 @@ Version Control: Git, GitHub
 
 
 
-📂 Structure
+📂 Structure:
 The repository is organized into folders based on the topics or projects I’m working on. Each folder contains relevant code, documentation, and resources. Here's a high-level overview:
 
 frontend/: Projects focused on UI/UX and interactivity.
 backend/: Backend services and APIs.
 3d-experiments/: Projects exploring 3D graphics using Three.js.
-fullstack/: Full-stack applications combining frontend and backend.
-sandbox/: Small experiments and coding challenges.
 
 
 
@@ -52,7 +50,8 @@ sandbox/: Small experiments and coding challenges.
 
 
 
-📚 Learning Focus
+
+📚 Learning Focus:
 I am actively learning and practicing:
 
 Frontend: Building scalable, reusable React components and styling with Tailwind CSS.
@@ -67,7 +66,7 @@ Performance: Writing optimized, efficient code for seamless user experiences.
 
 
 
-🌱 How to Use
+🌱 How to Use:
 Feel free to explore the repository to see my projects and experiments. You can:
 
 Clone the repository:
