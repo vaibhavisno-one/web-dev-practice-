@@ -81,49 +81,49 @@
 //validate and modify value of a property
 
 
-class Rectangle{
-    constructor(width, height){
-        this.width = width;
-        this.height = height;
-    }
+// class Rectangle{
+//     constructor(width, height){
+//         this.width = width;
+//         this.height = height;
+//     }
 
-    set width(newWidth){
-        if(newWidth > 0){
-            this._width = newWidth; //using an _ tells this a private property and u should not touch it (used for returning to get)
-        }
-        else{
-            console.error("a positive number")
-        }
-    }
+//     set width(newWidth){
+//         if(newWidth > 0){
+//             this._width = newWidth; //using an _ tells this a private property and u should not touch it (used for returning to get)
+//         }
+//         else{
+//             console.error("a positive number")
+//         }
+//     }
 
-    set height(newHeight){
-        if(newHeight > 0){
-            this._height = newHeight; //using an _ tells this a private property and u should not touch it
-        }
-        else{
-        console.error("a positive number");
-        }
-    }
+//     set height(newHeight){
+//         if(newHeight > 0){
+//             this._height = newHeight; //using an _ tells this a private property and u should not touch it
+//         }
+//         else{
+//         console.error("a positive number");
+//         }
+//     }
 
-    get width(){
-        return this._width;
-    }
+//     get width(){
+//         return this._width;
+//     }
 
-    get height(){
-        return this._height;
-    }
+//     get height(){
+//         return this._height;
+//     }
 
-    get area(){
-        return this.width * this.height;//ye usse bhi use karlega jo property nahi tha 
-    }
-}
+//     get area(){
+//         return this.width * this.height;//ye usse bhi use karlega jo property nahi tha 
+//     }
+// }
 
 
-const rectangle= new Rectangle(3,4);
+// const rectangle= new Rectangle(3,4);
 
-rectangle.width= 5; // will get updated
-rectangle.height= 6;
+// rectangle.width= 5; // will get updated
+// rectangle.height= 6;
 
-console.log(rectangle.width);
-console.log(rectangle.height);
-console.log(rectangle.area);
+// console.log(rectangle.width);
+// console.log(rectangle.height);
+// console.log(rectangle.area);
