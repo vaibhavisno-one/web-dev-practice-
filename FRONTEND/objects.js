@@ -127,3 +127,62 @@
 // console.log(rectangle.width);
 // console.log(rectangle.height);
 // console.log(rectangle.area);
+
+//..............................................Nested Objects................................................................
+
+// nested objects = objects inside other objects 
+//                         Allows to represent more complex data structures
+
+// const person = {
+//     fullName: "vaibhav",
+//     hobbie:["cricket","music"],
+//     address: {
+//         city:"surat",
+//         state:"gujarat",
+//         pincode: 395002
+//     }
+// }
+
+// console.log(person.hobbie[0]);
+// console.log(person.address.state);
+
+// // nested objects in constructor and classes 
+// class Person {
+//     constructor(name,age,...address){
+//         this.name = name;
+//         this.age = age;
+//         this.address = new Address(...address);
+
+//     }
+// }
+// class Address{
+//     constructor(city,state,pincode){
+//         this.city = city;
+//         this.state = state;
+//         this.pincode = pincode;
+//     }
+// }
+
+// const Person1 = new Person("vaibhav", 20, "surat", "gujarat", 395002);  
+
+///........................................................................Arrays of objects.............................................................
+// objects ko arrays me convert karne ke liye aur sare operation same rahenge
+
+
+
+// const fruits = [{name:"apple",color:"red"},
+//                 {name:"banana",color:"yellow"},
+//                 {name:"orange",color:"orange"},
+//                 {name:"kiwi",color:"green"},
+//                 {name:'mango',color:'yellow'}];
+// console.log(fruits[0]);
+// fruits.push({name:"grapes",color:"green"});
+// console.log(fruits);
+
+
+// fruits.forEach(fruit => console.log(fruit.name));
+
+
+// const fruitNames = fruits.map(fruit => fruit.name);
+
+// console.log(fruitNames);
