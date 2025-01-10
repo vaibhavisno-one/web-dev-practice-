@@ -73,4 +73,109 @@ const { isRejected } = require("@reduxjs/toolkit");
         // Pending -> Resolved Or Rejected
         //new Promise((resolve, reject) => {async code}); 
 
+
+// if we use Promise then we dont need callback and callback hell will
+
+
+
 // DO these Chores in Order
+
+//1. WALK THE DOG
+//2. CLEAN THE KITCHEN
+//3. TAKE OUT THE TRASH
+
+
+
+
+function walkDog(callback){
+
+    setTimeout(() => {
+        console.log("walk the dog");
+        callback();
+
+    },2000);
+
+
+}
+
+function cleanKitchen(callback){
+    setTimeout(() => {
+        console.log("clean the kitchen");
+        callback();
+    },3000);
+}
+
+function takeOutTrash(callback){
+    setTimeout(() => {
+        console.log("take out the trash");
+        callback();
+    },1000);
+}
+
+
+//callback hell
+
+walkDog(() => {
+    cleanKitchen(() => {
+        takeOutTrash(() => {
+            console.log("done");
+        });
+    });
+})
+
+
+
+//WITH PROMISES...........................
+
+function walkDog() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const dogWalked = false;
+            // reject("dog did not walk");
+            if (dogWalked) {
+                resolve("walk the dog");
+            } else {
+                reject("dog did not walk");
+            }
+        }, 2000);
+    });
+}
+
+function cleanKitchen() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("clean the kitchen");
+        }, 3000);
+    });
+}
+
+function takeOutTrash() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("take out the trash");
+        }, 1000);
+    });
+}
+
+// calling
+
+
+walkDog()
+    .then((value) => {
+        console.log(value);
+        return cleanKitchen();
+    })
+    .catch((error) => {
+        console.error(error); // Catch error for walkDog()
+        return cleanKitchen(); // Continue with cleanKitchen() even if walkDog fails
+    })
+    .then((value) => {
+        console.log(value);
+        return takeOutTrash();
+    })
+    .then((value) => {
+        console.log(value);
+        console.log("done");
+    });
+
+         
