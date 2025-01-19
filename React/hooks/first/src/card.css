@@ -1,0 +1,17 @@
+/* 
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+  
+  }
+  .card button{
+    margin: 10px;
+    background-color: white;
+  } */
