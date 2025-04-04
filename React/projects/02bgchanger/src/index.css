@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #000000;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes h1 to top and holder to bottom */
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1{
+  padding-top: 20px;
+  color: brown;
+  
+}
+.head {
+  /* margin-top: 20px;  */
+}
+
+.holder {
+  height: 40px;
+  width: 70%;
+  background: gray;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 40px;
+}
