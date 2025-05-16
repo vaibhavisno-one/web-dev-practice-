@@ -2,7 +2,7 @@
 //         (this object depends on the immediate context)
 //         person.name= this.name
 
-// does not work for arrow functions
+// // does not work for arrow functions
 
 // const person1 = {
 //     name: "vaibhav",
@@ -26,7 +26,7 @@
 // // person2.sayHello();
 // console.log(person2['sayHello']);
 
-//....................................................CONSTRUCTORS.................................................
+// // ....................................................CONSTRUCTORS.................................................
 // CONSTRUCTORS = special method for defining the properties and methods of object
 
 // function Car(make , model, year,color){                   //function Car(a , b, c,d){   
@@ -44,9 +44,9 @@
 // console.log(car1);
 
 
-//.....................................................CLASSES......................................................
+// // .....................................................CLASSES......................................................
 // (can be used instead of constructors)class = (ES6 feature) provides a more structured and cleaner way to work with objects compared to traditional constructor functions 
- //                used in static keyword, encapsulatio, inheritence
+//                 used in static keyword, encapsulatio, inheritence
 
 // class Product{
 //     constructor(name, price){
@@ -73,12 +73,12 @@
 // product2.displayProducts();
 // product2.calculateTotal(0.1);
 
-//.....................................................Getters and Setters......................................................
+// // .....................................................Getters and Setters......................................................
 
-//getters = special methid to make a property readable
-//setters = special method to make a property writable
+// getters = special methid to make a property readable
+// setters = special method to make a property writable
 
-//validate and modify value of a property
+// validate and modify value of a property
 
 
 // class Rectangle{
@@ -128,7 +128,7 @@
 // console.log(rectangle.height);
 // console.log(rectangle.area);
 
-//..............................................Nested Objects................................................................
+// // ..............................................Nested Objects................................................................
 
 // nested objects = objects inside other objects 
 //                         Allows to represent more complex data structures
@@ -165,7 +165,7 @@
 
 // const Person1 = new Person("vaibhav", 20, "surat", "gujarat", 395002);  
 
-///........................................................................Arrays of objects.............................................................
+// // /........................................................................Arrays of objects.............................................................
 // objects ko arrays me convert karne ke liye aur sare operation same rahenge
 
 

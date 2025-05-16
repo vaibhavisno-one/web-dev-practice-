@@ -7,7 +7,7 @@ import Card from './card.jsx'
 
 
 function App() {
-  const [count, setCount] = useState(15)
+  
 
   return (
     <>

@@ -1,12 +1,17 @@
 import React from 'react'
-import { useState } from 'react'
+import './App.css'
+import { useEffect,useState } from 'react'
+function App() {
 
-const card = () => {
+  const [count, setCount] = useState(0);
 
-  const [count, setCount] =  useState(0);
+
+  useEffect(() => {
+
+    alert("count is " + count)
+  }, [count===10])
   
 
-  
   return (
     <> 
         <div>
@@ -22,4 +27,4 @@ const card = () => {
   )
 }
 
-export default card
+export default App
