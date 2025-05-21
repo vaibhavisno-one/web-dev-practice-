@@ -27,18 +27,18 @@
 
 
 //Create a Scene
-
+//transformations
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(65,window.innerWidth/window.innerHeight,0.1,100);
 scene.add(camera);
 camera.position.z = 5;
 
 
-const box = new THREE.BoxGeometry(1,1,1);
+const box = new THREE.BoxGeometry(1,1,1);//shape of the object
 const material = new THREE.MeshBasicMaterial({color:"red"});
-let mesh = new THREE.Mesh(box,material);
+let mesh = new THREE.Mesh(box,material);//main object
 
-// mesh.position.x= 1;//position cube on x axis
+// mesh.position.x= 1;//position object on x axis
 // mesh.position.y= 1;
 // mesh.position.z= -1;
 
@@ -50,12 +50,23 @@ let mesh = new THREE.Mesh(box,material);
 // mesh.scale.y = 2;
 // mesh.scale.z = 2;
 
-
-
-
 scene.add(mesh);
 
 const canvas = document.querySelector("#draw");
-let renderer =  new THREE.WebGLRenderer({canvas});
+let renderer =  new THREE.WebGLRenderer({canvas,antialias:true});//canvas ko render karne ke liye
 renderer.setSize(window.innerWidth,window.innerHeight);
 renderer.render(scene,camera);
+
+
+//Animation
+
+let clock = new THREE.Clock();
+function animate(){
+    window,requestAnimationFrame(animate);//computer ki fps ke jitna chalate raho
+    renderer.render(scene,camera);
+    mesh.rotation.x += 0.01;//rotation on x axis
+    mesh.rotation.y = clock.getElapsedTime();//rotaion same on every pc
+
+}
+
+animate();
