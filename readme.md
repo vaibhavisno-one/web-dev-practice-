@@ -23,6 +23,7 @@ This repository serves as a comprehensive collection of my web development pract
 ### Backend
 - Node.js
 - Express.js
+- Java (SpringBoot)
 
 ### 3D Graphics
 - Three.js
@@ -54,7 +55,7 @@ I am actively learning and practicing:
 
 ### Backend Development
 - Creating APIs
-- Working with server-side frameworks like Express.js
+- Working with server-side frameworks like Express.js and Springboot
 
 ### 3D Web Development
 - Crafting immersive experiences with Three.js
