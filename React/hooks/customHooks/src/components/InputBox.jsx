@@ -6,6 +6,7 @@ function InputBox({
   selectCurrency = "usd",
   amountDisable = false,
   currencyDisable = false,
+  onCurrencyChange,
   className = "" }) {
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
@@ -17,7 +18,7 @@ function InputBox({
           placeholder="Amount"
           disabled={amountDisable}
           value={amount}
-          onChange={(e)=>onAmountChange && onAmountChange(Number(e.target.value))}
+          onChange={(e)=>onAmountChange && onAmountChange(Number(e.target.value))}//state re render karne ke liye hai kyunki amount type karna hai
         />
       </div>
       <div className="w-1/2 flex flex-wrap justify-end text-right">
@@ -27,7 +28,7 @@ function InputBox({
          bg-gray-100 cursor-pointer 
          outline-none"
          value={selectCurrency}
-         onChange={(e) => onCurrencyChange && onCurrencyChange(Number(e.target.value))}
+         onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
          disabled={currencyDisable}
          >
           {currencyOptions.map((currency)=>{

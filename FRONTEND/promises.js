@@ -135,6 +135,8 @@ async function getAllUsers(){
 }
 
 getAllUsers();
+
+
 //using then and catch
 fetch('https://jsonplaceholder.typicode.com/todos')
 .then((response)=>{
