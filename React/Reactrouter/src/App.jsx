@@ -1,18 +1,16 @@
 
 import './App.css'
 import {About,Contact,Footer,Header,Home} from "./components/Index"
+import { Outlet } from 'react-router-dom'
 function App() {
 
 
   return (
     <>
-      <h1>React router</h1>
-
-      <About/>
-      <Contact/>
-      <Footer/>
       <Header/>
-      <Home/>
+      <Outlet/>
+      <Footer/>
+      
     </>
   )
 }
