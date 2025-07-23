@@ -5,14 +5,13 @@ import connectDB from "./db/index.js";
 
 
 dotenv.config({
-    path:'./env'
+    path:'./env'   //takes info from .env
 })
 
 connectDB()
 .then(()=>{
     app.listen(process.env.PORT || 8000, ()=>{
-        console.log(`server is running on port ${process.env.PORT}`);
-        
+        console.log(`server is running on port ${process.env.PORT}`); // Uses that connectDB() function to actually open the door and start the app if it unlocks
     })
 })
 .catch((err)=>{
