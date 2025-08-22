@@ -8,7 +8,7 @@ dotenv.config({
     path:'./env'   //takes info from .env
 })
 
-connectDB()
+connectDB() //call other fucntion and then initialize it here
 .then(()=>{
     app.listen(process.env.PORT || 8000, ()=>{
         console.log(`server is running on port ${process.env.PORT}`); // Uses that connectDB() function to actually open the door and start the app if it unlocks

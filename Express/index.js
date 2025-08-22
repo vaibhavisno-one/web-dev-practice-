@@ -36,7 +36,13 @@ app.get("/users",(req,res)=>{
 
 // req.params is for dynamic routing 
 app.get("/users/:id",(req,res)=>{
-    const id = req.params;
+    const {id} = req.params;
+
+    const parseId = parseInt(id);
+
+    const user = data.find((user)=>user.id === parseId)
+
+    res.send(user)
 
     
 })
