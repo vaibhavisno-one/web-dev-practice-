@@ -1,3 +1,5 @@
+// setting up express
+
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser" 
@@ -18,8 +20,13 @@ app.use(express.static("public"))
 
 app.use(cookieParser())
 
+//routes import 
 
+import userRouter from "./routes/user.routes"
+
+//routes declaration
+
+app.use("./users", userRouter)
 
 export { app }
 
-// setting up express
