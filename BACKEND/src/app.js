@@ -26,7 +26,7 @@ import userRouter from "./routes/user.routes"
 
 //routes declaration
 
-app.use("./users", userRouter)
+app.use("/users", userRouter)
 
 export { app }
 
