@@ -1,4 +1,7 @@
 import asyncHandler from "../utils/asyncHandler.js";
+import ApiError from "../utils/ApiError.js";
+import {User} from "../models/user.model.js";
+import {uploadOnCloudinary} from "../utils/uploadOnCloudinary.js";
 
 
 const registerUser = asyncHandler(async (req, res)=>{
@@ -14,11 +17,50 @@ const registerUser = asyncHandler(async (req, res)=>{
 
 
     const {fullname, username,email,password}=req.body
+    
+//validation
+    if([fullname, username,email,password].some((field)=>
+        field.trim() ==="")){
+        throw new ApiError(400,"All fields are required")
+    }
 
-    console.log('email', email);
-    
-    
+//user existense check
+    const user = await User.findOne({
+        $or:[{email},{username}]
+    })
+    if(user){
+        throw new ApiError(409,"User already exists or email")
+    }
 })
 
 
-export  default registerUser
+const avatarLocalPath = req.file?.avatar[0]?.path;
+
+const coverImageLocalPath = req.file?.coverImage[0]?.path;
+
+
+if(!avatarLocalPath){
+    throw new ApiError(400,"Avatar is required")
+}
+
+const avatar = await uploadOnCloudinary(avatrLocalPath)
+const coverImage = await uploadOnCloudinary(coverImageLocalPath)
+
+if(!avatar){
+    throw new ApiError(400,"Avatar is required")
+}
+
+
+//create database entry for user
+
+const user = await User.create({
+    fullname,
+    username:username.toLowerCase(),
+    email,
+    password,
+    avatar:avatar.url,
+    coverImage:coverImage?.url || "",
+    
+})
+
+export  default {registerUser}
