@@ -2,6 +2,7 @@ import asyncHandler from "../utils/asyncHandler.js";
 import ApiError from "../utils/ApiError.js";
 import {User} from "../models/user.model.js";
 import {uploadOnCloudinary} from "../utils/uploadOnCloudinary.js";
+import { useDeferredValue } from "react";
 
 
 const registerUser = asyncHandler(async (req, res)=>{
@@ -63,4 +64,38 @@ const user = await User.create({
     
 })
 
-export  default {registerUser}
+if(!user){
+    throw new ApiError(500,"Something went wrong while registering the user")
+}
+
+
+
+const loginUser =asyncHandler(async(req,res,next)=>{
+
+    const {email,password} = req.body;
+
+    if(!email||!password){
+        throw new ApiError(400,"All fields are required")
+    } 
+
+    const user = await User.findOne({email}).select("+password");
+
+    if(!user){
+        throw new ApiError(401,"Invalid email ")
+    }
+
+    const isMatch =await user.isPasswordCorrect(password)
+
+    if(!isMatch){
+        throw new ApiError(401,"Invalid password");
+        
+    }
+
+    res.status(200).json({
+        success:true,
+        message:"User logged in successfully",
+    })
+
+})
+
+export  default {registerUser,loginUser}
