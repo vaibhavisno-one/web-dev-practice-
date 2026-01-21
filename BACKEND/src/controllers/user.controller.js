@@ -91,6 +91,12 @@ const loginUser =asyncHandler(async(req,res,next)=>{
         
     }
 
+    const accessToken = user.generatAccessToken()
+    const refreshToken = user.generatRefeshToken()
+
+    user.refreshToken= refreshToken
+    await user.save({validateBeforeSave:false})
+
     res.status(200).json({
         success:true,
         message:"User logged in successfully",
