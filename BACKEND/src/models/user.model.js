@@ -37,7 +37,7 @@ const userSchema = new Schema(
         },
         watchHistory: [
             {
-                type: Schema.type.ObjectId,
+                type: Schema.Types.ObjectId,
                 ref: "Video"
             }
         ],
@@ -52,7 +52,7 @@ const userSchema = new Schema(
         },
         refreshToken: {
             type: String,
-            required: true,
+            // required: true,
 
         },
         createdAt: {
@@ -87,7 +87,7 @@ userSchema.methods.isPassworCorrect= async function
 //method for tokengeneration (JWT)
 
 userSchema.methods.generatAccessToken= function(){
-    jwt.sign(
+    return jwt.sign(
         {
             _id: this._id,
             email:this.email,
@@ -103,7 +103,7 @@ userSchema.methods.generatAccessToken= function(){
 
 // Session generations
 userSchema.methods.generatRefeshToken= function(){
-    jwt.sign(
+    return jwt.sign(
         {
             _id: this._id,            
         },

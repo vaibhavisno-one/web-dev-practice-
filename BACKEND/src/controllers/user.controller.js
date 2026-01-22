@@ -2,8 +2,25 @@ import asyncHandler from "../utils/asyncHandler.js";
 import ApiError from "../utils/ApiError.js";
 import {User} from "../models/user.model.js";
 import {uploadOnCloudinary} from "../utils/uploadOnCloudinary.js";
-import { useDeferredValue } from "react";
 
+
+
+const generateAccessAndRefreshToken = async(userId)=>{
+    try{
+        const user = await User.findById(userId)
+
+        const accessToken=user.generateAccessToken()
+        const refreshToken=user.generateRefeshToken()
+
+        user.refreshToken=refreshToken
+        await user.save({validateBeforeSave:false})
+
+        return {accessToken,refreshToken}
+
+    }catch(error){
+        throw new ApiError(500,"Something went wrong while generating access and refresh token")
+    }
+}
 
 const registerUser = asyncHandler(async (req, res)=>{
     // get user detail from frontend
@@ -78,7 +95,7 @@ const loginUser =asyncHandler(async(req,res,next)=>{
         throw new ApiError(400,"All fields are required")
     } 
 
-    const user = await User.findOne({email}).select("+password");
+    const user = await User.findOne({email});
 
     if(!user){
         throw new ApiError(401,"Invalid email ")
@@ -91,11 +108,12 @@ const loginUser =asyncHandler(async(req,res,next)=>{
         
     }
 
-    const accessToken = user.generatAccessToken()
-    const refreshToken = user.generatRefeshToken()
+    const {accessToken,refreshToken}= await generateAccessAndRefreshToken(user._id)
 
     user.refreshToken= refreshToken
     await user.save({validateBeforeSave:false})
+
+    const loggedInUser = await User.findById(user._id).select("-password -refreshToken")
 
     res.status(200).json({
         success:true,
