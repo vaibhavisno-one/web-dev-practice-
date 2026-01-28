@@ -81,7 +81,11 @@ const user = await User.create({
     
 })
 
-if(!user){
+const createdUser = await User.findById(user._id).select(
+        "-password -refreshToken"
+    )
+
+if(!createdUser){
     throw new ApiError(500,"Something went wrong while registering the user")
 }
 
